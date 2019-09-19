@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Hello, {{ user.username }}!</h1>
+	<h2>{{ home_title }}</h2>
+
+	<div id="top-banner"></div>
+
+	<div id="popular-bgames">
+		<h2>Popular board games right now</h2>
+
+	</div>
+
+	<div id="recently-released">
+		<h2>Recently release board games</h2>
+	</div>
+
+	<div id="Coming soon">
+		<h2>Coming soon</h2>
+
+	</div>
+
+	<div id="Coming soon">
+		<h2>Trending on kickstarter</h2>
+		
+	</div>
+	{% for post in posts %}
+		<div>
+			<p>{{ post.author.username }} says: <b>{{ post.body }}</b></p>
+		</div>
+	{% endfor %}
+{% endblock %}
